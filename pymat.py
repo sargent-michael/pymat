@@ -17,12 +17,17 @@ def main():
     
     print("[+] Validating CTF Platform")
 
+    # Checks to see if the user entered a correct CTF Platform
     if platform == 'htb' or platform == 'thm':
 
+        # Checks to see if the path already exists
         print("[+] Checking to see if that directory already exists")
-        dir_check = os.path.exists(f'/home/nop/Documents/{platform}/{project}')
+        dir_check = os.path.exists(f'/<USER>/<PATH>/Documents/{platform}/{project}')
         
+        # If the path does not already exist then it will continue
         if dir_check == False:
+
+            # Generates a new CTF Project in the given CTF dir
             if platform == 'htb':
                 print("[+] Creating a new directory for htb")
                 os.system(f"mkdir ~/Documents/htb/{project}")
@@ -33,12 +38,14 @@ def main():
                 os.system(f"mkdir ~/Documents/thm/{project}")
                 print(Fore.GREEN + "[+] Directory creation was successful")
 
+        # If that dir already exists, then it will exit out...
         else:
                 print(Fore.RED + "[-] That project already exists...")
-
+    
+    # If the user does not input a correct ctf, then it will exit out...
     else:
         print(Fore.RED + f"[-] Platform \"{platform}\" does not exist...")
         
 
 if __name__ == "__main__":
-    main()  
+    main()    
