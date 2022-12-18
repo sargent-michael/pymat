@@ -65,9 +65,11 @@ def make_dir(platform, project):
 def main():
     # Arguments
     parser = argparse.ArgumentParser(description='Simple CTF Project Manager')
-    parser.add_argument('-c', '--ctf', action="store", dest="ctf", help='ctf platform - i.e. \"hack the box\" or \"try hackme\"', metavar='')
-    parser.add_argument('-l', '--list', action="store", dest="list", help='list the contents of a CTF Directory', metavar='')
-    parser.add_argument('-p', '--project', action="store", dest="project", help='the name of target machine', metavar='')
+    parser = argparse.ArgumentParser(add_help=False)
+    parser.add_argument('-h', '--help', action='help', default=argparse.SUPPRESS, help='\b\b\b\bShow this help message and exit.')
+    parser.add_argument('-c', '--ctf', action="store", dest="ctf", help='ctf platform - i.e. \"hack the box\" or \"try hackme\"', metavar='\b')
+    parser.add_argument('-l', '--list', action="store", dest="list", help='list the contents of a CTF Directory', metavar='\b')
+    parser.add_argument('-p', '--project', action="store", dest="project", help='the name of target machine', metavar='\b')
 
     # Args to Vars
     args = parser.parse_args()

@@ -10,14 +10,11 @@ Let's take a look at the the help menu.
 ./pymat.py -h
 usage: pymat.py [-h] [-c] [-l] [-p]
 
-Simple CTF Project Manager
-
 options:
-  -h, --help       show this help message and exit
-  -c , --ctf       ctf platform - i.e. "hack the box" or "try hackme"
-  -l , --list      list the contents of a CTF Directory
-  -p , --project   the name of target machine
-                                                
+  -h, --help     Show this help message and exit.
+  -c, --ctf      ctf platform - i.e. "hack the box" or "try hackme"
+  -l, --list     list the contents of a CTF Directory
+  -p, --project  the name of target machine                   
 ```
 
 First, lets try htb and project Test...
