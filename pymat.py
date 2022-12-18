@@ -4,8 +4,22 @@ import os
 from colorama import Fore
 
 
+def list_all(dir_list):
+    # Prints all CTF project folders
+    print(f"[+] Printing all project folders...")
+    
+    print("[+] Hack-the-Box Projects")
+    htb_dir = os.listdir('/<USER>/<PATH>/Documents/htb/')
+    for i in htb_dir:
+        print(f"\t{i}") 
+    
+    print("[+] Try-Hack-Me Projects")
+    thm_dir = os.listdir('/<USER>/<PATH>/Documents/thm/')
+    for i in thm_dir:
+        print(f"\t{i}")
 
-def list_dir(dir_list):
+
+def list_dir(dir_list):  
     # Checks for valid CTF folder
     print(f"[+] Checking for {dir_list} project folders")
     if dir_list == 'htb' or dir_list == 'thm':
@@ -13,7 +27,7 @@ def list_dir(dir_list):
         print(f"[+] Printing {dir_list} project folders...\n")
         ctf_dir = os.listdir(f'/<USER>/<PATH>/Documents/{dir_list}')
         for i in ctf_dir:
-            print(i)
+            print(i)   
     
     # If the user does not input a correct ctf, then it will exit out...
     else:
@@ -65,7 +79,10 @@ def main():
     if project is not None:
         make_dir(platform, project)
     elif dir_list is not None:
-        list_dir(dir_list)
+        if dir_list == 'all':
+            list_all(dir_list)
+        else:
+            list_dir(dir_list)
     else:
         parser.print_help()
        

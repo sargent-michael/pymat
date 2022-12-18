@@ -2,7 +2,7 @@
 
 PyMat is a simple CTF project directory automation tool. Often times, I find myself creating a directory, then cd'ing into, and then being able to start my enumeration workflow. This script is to help with that. Right now it is a little bare-bones because it just creates a project directory in the the CTF platform directory that you are using at that time. You can also list the current project folders in those CTF folders with the -l option.
 
-**PLEASE NOTE:** In order for this script to work for you, you need to create a htb (hack-the-box)and thm (try-hack-me) directory in your documents folder as well as replacing the directory on lines 14 and 28 to your users documents directory.
+**PLEASE NOTE:** In order for this script to work for you, you need to create a htb (hack-the-box)and thm (try-hack-me) directory in your documents folder as well as replacing the directory on lines 12, 17, 28 and 42 to your users documents directory.
 
 ## Example of Usuage
 Let's take a look at the the help menu.
@@ -44,7 +44,21 @@ As you can see here, we inputted an incorrect CTF Platform and got an error
 [-] Platform "adf" does not exist...
 ```
 
-List of htb Projects
+List all CTF Project Folders
+```python
+./pymat.py -l all   
+[+] Printing all project folders...
+[+] Hack-the-Box Projects
+        shoppy
+        support
+[+] Try-Hack-Me Projects
+        overpass
+        steel
+        jenkins
+        terminator
+```
+
+List of HTB Projects Folders
 ```python
 ./pymat.py -l htb          
 [+] Checking for htb project folders
