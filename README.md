@@ -60,12 +60,12 @@ List all CTF Project Folders
 
 List of HTB Projects Folders
 ```python
-./pymat.py -l htb          
+./pymat.py -l htb
 [+] Checking for htb project folders
 [+] Printing htb project folders...
+        shoppy
+        support
 
-shoppy
-support
 ```
 
 List error

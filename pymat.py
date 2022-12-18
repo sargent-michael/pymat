@@ -24,10 +24,10 @@ def list_dir(dir_list):
     print(f"[+] Checking for {dir_list} project folders")
     if dir_list == 'htb' or dir_list == 'thm':
         # List the project folder in that Directory
-        print(f"[+] Printing {dir_list} project folders...\n")
+        print(f"[+] Printing {dir_list} project folders...")
         ctf_dir = os.listdir(f'/<USER>/<PATH>/Documents/{dir_list}')
         for i in ctf_dir:
-            print(i)   
+            print(f"\t{i}")   
     
     # If the user does not input a correct ctf, then it will exit out...
     else:
