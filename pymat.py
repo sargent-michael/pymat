@@ -50,7 +50,7 @@ def make_dir(platform, project):
 
 def main():
     # Arguments
-    parser = argparse.ArgumentParser(description='Simple Python Port Scanner')
+    parser = argparse.ArgumentParser(description='Simple CTF Project Manager')
     parser.add_argument('-c', '--ctf', action="store", dest="ctf", help='ctf platform - i.e. \"hack the box\" or \"try hackme\"', metavar='')
     parser.add_argument('-l', '--list', action="store", dest="list", help='list the contents of a CTF Directory', metavar='')
     parser.add_argument('-p', '--project', action="store", dest="project", help='the name of target machine', metavar='')
